@@ -1,3 +1,146 @@
 h1{
     color: aqua;
 }
+
+/* Nav1 CSS*/
+
+#nav1{
+    width:100%;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 2.5rem;
+    background-color: #dddddd;
+  }
+  #navbar{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  a {
+    display: block;
+    padding: 8px;
+    background-color: #dddddd;
+    color: black;
+    text-decoration: none;
+  }
+  a:hover{
+    text-decoration: underline;
+    color: rgb(131, 9, 142);
+  }
+  #hamburger{
+    display: none;
+    margin-left: auto;
+    font-size: 2rem;
+  }
+  #hamburger:hover{
+    color: rgb(131, 9, 142);
+    cursor: pointer;
+  }
+  /* Nav1.2 CSS*/
+#navbar-vertical{
+    list-style: none;
+    margin-top: 0; 
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 100%;
+    background-color: #dddddd;
+    display: none;
+
+}
+
+/*card 1*/
+
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;900&display=swap')
+
+body {
+  background: #f2f2f2;
+  }
+  .container  {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    height: 400px;
+    width: 600px;
+    background: #f2f2f2;
+    overflow: hidden;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 0 0 20px 8px #d0d0d0;
+    }
+
+  .content {
+    position: absolute;
+    top: 50%;
+    transform: translatey(-50%);
+    text-align: justify;
+    color: black;
+    padding: 40px;
+    font-family: 'Merriweather', serif;
+    }
+
+  h1 {
+    font-weight: 900;
+    text-align: center;
+    }
+
+  h3 {
+    font-weight: 300;
+    }
+
+  .flap {
+   width: 100%;
+   height: 100%;
+    }
+
+  .flap::before {
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 50%;
+    background: url("https://pbs.twimg.com/profile_images/1347260174176710658/2GfSZ1i__400x400.jpg") white;
+    background-position: 100px;
+    background-repeat: no-repeat;
+    transition: 1s;
+    }
+
+  .flap::after {
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 50%;
+    right: 0;
+    background: url("https://pbs.twimg.com/profile_images/1347260174176710658/2GfSZ1i__400x400.jpg") white;
+    background-position: -200px;
+    background-repeat: no-repeat;
+    transition: 1s;
+    } 
+
+  .container:hover .flap::after {
+    transform: translatex(300px);
+    }
+
+  .container:hover .flap::before{
+    transform: translatex(-300px);
+    }
+ /*end card 1*/
+
+ /*card 2 */
+
+ 
+  /* Nav1 continued CSS*/
+  @media screen and (max-width:800px) {
+    #navbar{
+        display: none;
+    }
+    #hamburger{
+        display: inline-block;
+    }
+
+  }
